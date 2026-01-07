@@ -95,7 +95,7 @@ const DashboardHeader = () => {
             </div>
 
             {/* Split Layout: Calendar & Motivation */}
-            <div className="grid-habits" style={{ gridTemplateColumns: '1.5fr 1fr' }}>
+            <div className="dashboard-grid">
                 {/* Calendar Section */}
                 <div className="glass-panel" style={{ padding: 'var(--spacing-lg)' }}>
                     <WeeklyCalendar

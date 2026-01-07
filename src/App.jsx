@@ -16,10 +16,19 @@ function App() {
   return (
     <ThemeProvider>
       <HabitProvider>
-        <Layout>
+        <Layout headerAction={
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="btn btn-primary gap-sm"
+            style={{ borderRadius: 'var(--radius-full)', padding: '8px 16px', fontSize: '0.9rem' }}
+          >
+            <Plus size={18} />
+            <span>New Habit</span>
+          </button>
+        }>
           <DashboardHeader />
 
-          <div className="flex items-center justify-between" style={{ marginBottom: 'var(--spacing-md)' }}>
+          <div className="action-bar" style={{ justifyContent: 'flex-start' }}>
             <div className="glass-panel flex p-1 rounded-lg" style={{ padding: '4px', borderRadius: 'var(--radius-lg)' }}>
               <button
                 onClick={() => setView('list')}
@@ -38,15 +47,6 @@ function App() {
                 Progress
               </button>
             </div>
-
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="btn btn-primary gap-sm"
-              style={{ borderRadius: 'var(--radius-full)', padding: '10px 20px' }}
-            >
-              <Plus size={20} />
-              <span>New Habit</span>
-            </button>
           </div>
 
           <AnimatePresence mode="wait">

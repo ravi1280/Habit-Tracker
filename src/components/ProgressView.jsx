@@ -67,10 +67,9 @@ const ProgressView = () => {
                 </div>
             </div>
 
-            {/* Individual Habit Performance Cards */}
             <div className="flex flex-col gap-md">
                 <h3 className="text-lg">Habit Performance</h3>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'var(--spacing-md)' }}>
+                <div className="habit-performance-grid">
                     {habits.map((habit) => {
                         const { currentStreak, totalCompleted } = getHabitStats(habit);
                         const last30Days = eachDayOfInterval({ start: subDays(today, 29), end: today });
