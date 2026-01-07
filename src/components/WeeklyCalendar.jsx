@@ -10,6 +10,7 @@ import {
     isSameMonth
 } from 'date-fns';
 import { motion } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const WeeklyCalendar = ({ currentMonth, onNextMonth, onPrevMonth }) => {
     const [selectedDate, setSelectedDate] = useState(new Date());
@@ -34,17 +35,37 @@ const WeeklyCalendar = ({ currentMonth, onNextMonth, onPrevMonth }) => {
                 <div className="flex gap-xs">
                     <button
                         onClick={onPrevMonth}
-                        className="btn-ghost p-1 rounded-full"
-                        style={{ width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--card-bg)' }}
+                        className="p-1 hover:bg-white/10 transition-colors"
+                        style={{
+                            width: '32px',
+                            height: '32px',
+                            borderRadius: '50%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            color: 'var(--color-text-secondary)',
+                            backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                            border: '1px solid rgba(255, 255, 255, 0.1)'
+                        }}
                     >
-                        &lt;
+                        <ChevronLeft size={20} />
                     </button>
                     <button
                         onClick={onNextMonth}
-                        className="btn-ghost p-1 rounded-full"
-                        style={{ width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--card-bg)' }}
+                        className="p-1 hover:bg-white/10 transition-colors"
+                        style={{
+                            width: '32px',
+                            height: '32px',
+                            borderRadius: '50%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            color: 'var(--color-text-secondary)',
+                            backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                            border: '1px solid rgba(255, 255, 255, 0.1)'
+                        }}
                     >
-                        &gt;
+                        <ChevronRight size={20} />
                     </button>
                 </div>
             </div>
