@@ -20,7 +20,7 @@ function App() {
           <button
             onClick={() => setIsModalOpen(true)}
             className="btn btn-primary gap-sm"
-            style={{ borderRadius: 'var(--radius-full)', padding: '8px 16px', fontSize: '0.9rem' }}
+            style={{ borderRadius: 'var(--radius-full)', padding: '8px 16px', fontSize: '0.9rem', color: '#000000' }}
           >
             <Plus size={18} />
             <span>New Habit</span>
@@ -33,7 +33,7 @@ function App() {
               <button
                 onClick={() => setView('list')}
                 className={`btn ${view === 'list' ? 'btn-primary' : 'btn-ghost'}`}
-                style={{ borderRadius: 'var(--radius-md)', padding: '6px 12px' }}
+                style={{ borderRadius: 'var(--radius-md)', padding: '6px 12px', color: view === 'list' ? '#000000' : undefined }}
               >
                 <List size={18} style={{ marginRight: '6px' }} />
                 List
@@ -41,7 +41,7 @@ function App() {
               <button
                 onClick={() => setView('progress')}
                 className={`btn ${view === 'progress' ? 'btn-primary' : 'btn-ghost'}`}
-                style={{ borderRadius: 'var(--radius-md)', padding: '6px 12px' }}
+                style={{ borderRadius: 'var(--radius-md)', padding: '6px 12px', color: view === 'progress' ? '#000000' : undefined }}
               >
                 <BarChart2 size={18} style={{ marginRight: '6px' }} />
                 Progress
