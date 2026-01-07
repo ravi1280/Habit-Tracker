@@ -81,10 +81,11 @@ const AddHabitModal = ({ isOpen, onClose }) => {
                                     style={{
                                         fontSize: '1.1rem',
                                         padding: 'var(--spacing-md)',
-                                        backgroundColor: 'var(--color-bg)',
-                                        border: '1px solid var(--color-border)',
+                                        backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                                        border: '1px solid rgba(255, 255, 255, 0.1)',
                                         borderRadius: 'var(--radius-md)',
-                                        transition: 'all 0.2s'
+                                        transition: 'all 0.2s',
+                                        color: 'var(--color-text-main)'
                                     }}
                                 />
                             </div>
@@ -99,10 +100,11 @@ const AddHabitModal = ({ isOpen, onClose }) => {
                                     style={{
                                         resize: 'none',
                                         padding: 'var(--spacing-md)',
-                                        backgroundColor: 'var(--color-bg)',
-                                        border: '1px solid var(--color-border)',
+                                        backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                                        border: '1px solid rgba(255, 255, 255, 0.1)',
                                         borderRadius: 'var(--radius-md)',
-                                        fontFamily: 'inherit'
+                                        fontFamily: 'inherit',
+                                        color: 'var(--color-text-main)'
                                     }}
                                 />
                             </div>
